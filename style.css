@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@500&display=swap');
+#topper {
+    background-color: black;
+    padding: 45px 10px;
+    background-image: url("../Site/quadro-negro-inscrito-com-formulas-e-calculos-cientificos_1150-19413.jpg");
+    border-radius:5px;
+}
+body {
+    background-color: lightgray;
+    font-family: Sans-Serif,Verdana, Arial;
+    max-width: 900px;
+    margin: auto;
+    padding: 10px;
+}
+.post {
+    background-color: white;
+    padding:10px;
+    border: 3px solid cyan;
+    border-radius:5px;
+    margin:auto;
+    margin-top:0;
+    margin-bottom: 15px;
+    max-width: 880px;
+}
+#contact {
+    background-color: black;
+    padding: 0;
+    margin:0;
+    border-radius:5px;
+    font-family: 'spline sans mono',sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+#topper aside{
+    float: left;
+    margin: 0;
+    padding: 0;
+    position:fixed;
+    left: 10px;
+    top:10px;
+}
+#topper figure img{
+    border: 3px solid white;
+    border-radius: 50%;
+    margin:0;
+    padding: 0;
+    width: 70%;
+}
+h1 {
+    background-color: white;
+    width: 500px;
+    margin: auto;
+    border: 3px solid rgb(34, 34, 34);
+    border-radius: 5px;
+    padding: 3px;
+    font-size: 40px;
+    color: rgb(34, 34, 34);
+    text-align:center;
+    text-transform: uppercase;
+}
+.container{
+    height: 40px;
+    margin:auto;
+    margin-top: 15px;
+    margin-bottom:15px;
+    padding:0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    height:40px;
+    width:900px;
+    background-color: rgb(0,200,200);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.card-wrapper{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.card-wrapper:before{
+    content: '';
+    position:absolute;
+    height: 0px;
+    width: 50px;
+    display: block;
+    border: 1px solid white;
+    opacity: 0;
+    transition: 0.3s;
+}
+.card-wrapper h2{
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    transition:0.3s;
+}
+
+.card:hover {
+    filter: unset;
+    background-color: rgb(0,255,255);
+}
+.card:hover > .card-wrapper:before {
+    height: 30px;
+    width: 880px;
+    opacity: 1;
+}
+#about_me{
+    max-width: 900px;
+    margin:auto;
+    margin-bottom: 15px;
+}
+.post img{
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 5px;
+    margin-bottom:15px;
+    width: 850px;
+    height: 120px;
+    object-fit: cover;
+    object-position: center;
+}
+.post header h3 {
+    color: cyan;
+    margin-top: 2px;
+    margin-bottom:15px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.post header img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#top_image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.wrapper {
+    height: 30vh;
+    background: linear-gradient(-45deg, rgb(0,100,100),rgb(0, 150, 150),rgb(0, 200, 200),rgb(0,255,255));
+    background-size: 400% 400%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: backgroundTransition 8s ease-in-out infinite ;
+}
+h4 {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: white;
+}
+.social-media{
+    margin-top: 1rem;
+    display: flex;
+}
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    padding: 1rem 4rem;
+    border: 1px solid white;
+    min-width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .35s cubic-bezier(0.55,0.025,0.075,0.01);
+}
+a:hover {
+    color: cyan;
+    background-color: white;
+}
+@keyframes backgroundTransition {
+    0%{
+        background-position: 0% 80%;
+    }
+    50%{
+        background-position: 80% 100%;
+    }
+    100%{
+        background-position: 0% 80%;
+    }
+}
