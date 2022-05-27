@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@500&display=swap');
 #topper {
-    background: linear-gradient(-45deg, rgb(0,100,100),rgb(0, 150, 150),rgb(0, 200, 200),rgb(0,255,255));
+    background: linear-gradient(-45deg, rgb(0,100,100),rgb(0, 150, 150),rgb(0, 200, 175),rgb(0,255,150));
     padding: 45px 10px;
+    height: 90vh;
     background-size: 400% 400%;
     display: flex;
     flex-direction: column;
@@ -12,36 +13,19 @@
 }
 body {
     background-color: lightgray;
-    font-family: Sans-Serif,Verdana, Arial;
-    max-width: 900px;
+    font-family: "spline sans mono",Sans-Serif,Verdana;
+    max-width: 70vw;
     margin: auto;
     padding: 10px;
 }
-.post {
-    background-color: white;
-    padding:10px;
-    border: 3px solid rgb(0,200,200);
-    border-radius:5px;
-    margin:auto;
-    margin-top:0;
-    margin-bottom: 15px;
-    max-width: 880px;
-}
-#contact {
-    padding: 0;
-    margin:0;
-    border-radius:5px;
-    font-family: 'spline sans mono',sans-serif;
-    justify-content: center;
-    align-items: center;
-}
+
 #topper aside{
     float: left;
     margin: 0;
     padding: 0;
     position:fixed;
-    left: 10px;
-    top:10px;
+    left: 0;
+    top:0;
 }
 #topper figure img{
     border: 3px solid white;
@@ -53,124 +37,281 @@ body {
 }
 h1 {
     display: flex;
-    width: 500px;
-    margin: auto;
-    padding: 3px;
     font-size: 40px;
     color: white;
     border: 1px solid white;
+    margin:auto;
+    width:500px;
+    padding:3px;
     border-radius: 5px;
     letter-spacing: 3px;
     justify-content: center;
     align-items: center;
     text-align:center;
     text-transform: uppercase;
+    position:absolute;
 }
-.container{
-    height: 40px;
-    margin:auto;
-    margin-top: 20px;
-    margin-bottom:15px;
-    padding:0;
-    border-radius: 5px;
+h6 {
     display: flex;
+    font-size: 12px;
+    color: white;
+    border-radius: 5px;
+    letter-spacing: 3px;
     justify-content: center;
     align-items: center;
+    text-align:center;
+    text-transform: uppercase;
+    position:relative;
+    top:50px;
 }
-.card{
+
+/* Checkbox */
+
+.checkbox-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.checkbox{
+    height:100px;
+    width:100px;
+    position:absolute;
+    top:0;
+    right:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index:9999;
+    transition: 400ms ease-in-out 0s;
+}
+
+.checkbox .trace{
+    width: 50px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    border-radius: 4px;
+    transition: 0.35s ease-in-out;
+
+}
+.checkbox .trace:nth-child(1) {
+    top:26px;
+    transform: rotate(0)
+}
+
+.checkbox .trace:nth-child(2) {
+    top:46px;
+    transform: rotate(0);
+}
+
+.checkbox .trace:nth-child(3) {
+    top: 66px;
+    transform: rotate(0)
+}
+
+#toggle {
+    display:none;
+}
+
+/* Menu */
+
+.menu {
+    position:absolute;
+    top:28px;
+    right: 30px;
+    background:transparent;
     height:40px;
-    width:900px;
-    background: linear-gradient(-45deg, rgb(0,100,100),rgb(0, 150, 150),rgb(0, 200, 200),rgb(0,255,255));
+    width: 40px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 0px white;
+    z-index:-1;
+    transition: 400ms ease-in-out 0s;
+}
+
+.menu-items {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:90vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index:2;
+    opacity:0;
+    visibility: hidden;
+    transition: 400ms ease-in-out 0s;
+}
+
+.menu-items ul{
+    list-style-type: none;
+}
+.menu-items ul li a{
+    margin: 10px 0;
+    color:rgb(0, 200, 175);
+    text-decoration:none;
+    text-transform:uppercase;
+    letter-spacing: 3px;
+    font-size: 40px;
+}
+
+/* Animação do menu */
+
+#toggle:checked + .checkbox .trace:nth-child(1){
+    transform: rotate(45deg);
+    background-color: rgb(0, 200, 175);
+    top:47px;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(2){
+    transform: translate(-100px);
+    width:30px;
+    visibility: hidden;
+    opacity:0;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(3){
+    transform: rotate(-45deg);
+    background-color: rgb(0, 200, 175);
+    top:48px;
+}
+
+#toggle:checked + .checkbox{
+    background-color: white;
+}
+
+#toggle:checked ~ .menu{
+    box-shadow: 0px 0px 0px 100vmax white;
+    z-index:1;
+}
+
+#toggle:checked ~ .menu-items{
+    visibility: visible;
+    opacity:1;
+}
+
+/*CARDS*/
+
+.container{
+    width:100%;
+    height: auto;
+    display:flex;
+    margin: 3rem 0;
+    flex-direction: column;
+    border-radius: 5px;
+    justify-content: space-evenly;
+    align-items: center;
+    padding:1rem 0;
+}
+
+.card-container {
+    display:flex;
+    align-items:center;
+    justify-content: space-evenly;
+    width:90%;
+}
+
+.card{
+    height: 300px;
+    width: 400px;
+    margin:1rem 0;
+    background-image: url("../images/nature.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 5px;
-    background-size: 400% 400%;
-    animation: backgroundTransition 8s ease-in-out infinite ;
     display: flex;
     justify-content: center;
     align-items: center;
+    filter:grayscale(50%);
+    color: white;
     cursor: pointer;
     transition: 0.3s;
 }
+
+.card-text{
+    width:40%;
+    font-family:sans-serif;
+    letter-spacing: 1px;
+    color: rgb(109,109,109);
+
+}
+
 .card-wrapper{
     text-align: center;
-    display: flex;
+    display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
-    margin-bottom:0;
+    position:relative;
 }
+
 .card-wrapper:before{
     content: '';
     position:absolute;
-    height: 0px;
-    width: 50px;
+    height: 100px;
+    width: 100px;
     display: block;
     border: 1px solid white;
     opacity: 0;
     transition: 0.3s;
 }
-.card-wrapper h2{
-    font-size: 22px;
-    color: white;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+.card-wrapper h3{
+    font-size: 40px;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     margin: 0;
     transition:0.3s;
+}
+.card-wrapper p{
+    font-size:0;
+    visibility: hidden;
+    opacity:0;
+    text-transform: uppercase;
+    transition: 0.3s;
 }
 
 .card:hover {
     filter: unset;
 }
+
 .card:hover > .card-wrapper:before {
-    height: 30px;
-    width: 150px;
+    height: 250px;
+    width: 350px;
     border-radius: 5px;
     opacity: 1;
 }
+
+.card:hover > .card-wrapper p{
+    font-size:14px;
+    opacity:1;
+    visibility: visible;
+}
+
+.main {
+    background-color: white;
+    border-radius:5px;
+    margin-top:0;
+    margin-bottom: 15px;
+    width: 70vw;
+}
 #about_me{
-    max-width: 900px;
-    margin:auto;
+    width: 70vw;
     margin-bottom: 15px;
 }
-.post img{
+
+#contact {
     padding: 0;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    margin-top: 5px;
-    margin-bottom:15px;
-    width: 850px;
-    height: 120px;
-    object-fit: cover;
-    object-position: center;
-}
-.post header h3 {
-    color: rgb(0,200,200);
-    margin-top: 2px;
-    margin-bottom:15px;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: capitalize;
-}
-.post header img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-#top_image {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin:0;
+    border-radius:5px;
+    justify-content: center;
+    align-items: center;
 }
 .wrapper {
-    height: 25vh;
-    background: linear-gradient(-45deg, rgb(0,100,100),rgb(0, 150, 150),rgb(0, 200, 200),rgb(0,255,255));
+    height: 90vh;
+    background: linear-gradient(-45deg, rgb(0,100,100),rgb(0, 150, 150),rgb(0, 200, 175),rgb(0,255,200));
     background-size: 400% 400%;
     display: flex;
     border-radius: 5px;
@@ -188,7 +329,7 @@ h4 {
     margin-top: 1rem;
     display: flex;
 }
-a {
+.social-media a {
     text-decoration: none;
     color: white;
     margin-left:1px;
@@ -204,7 +345,7 @@ a {
     transition: .35s cubic-bezier(0.55,0.025,0.075,0.01);
 }
 a:hover {
-    color: rgb(0, 200, 200);
+    color: rgb(0, 200, 175);
     background-color: white;
 }
 @keyframes backgroundTransition {
