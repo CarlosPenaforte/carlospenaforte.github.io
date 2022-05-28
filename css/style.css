@@ -4,7 +4,7 @@ body {
     font-family: "spline sans mono",Sans-Serif,Verdana;
     width: 97vw;
     margin: auto;
-    padding: 10px;
+    padding: 0 10px;
 }
 #topper {
     background: linear-gradient(-45deg, rgb(0,100,100),rgb(0, 150, 150),rgb(0, 200, 175),rgb(0,255,150));
@@ -20,11 +20,11 @@ body {
 }
 h1 {
     display: flex;
-    font-size: 60px;
+    font-size: 70px;
     color: white;
     border: 1px solid white;
     margin:auto;
-    width:700px;
+    width:850px;
     padding:3px;
     border-radius: 5px;
     letter-spacing: 3px;
@@ -49,12 +49,12 @@ h1 {
     border-radius: 50%;
     margin:0;
     padding: 0;
-    width: 100%;
+    width: 180px;
 }
 
 h6 {
     display: flex;
-    font-size: 20px;
+    font-size: 30px;
     color: white;
     border-radius: 5px;
     letter-spacing: 3px;
@@ -62,7 +62,33 @@ h6 {
     align-items: center;
     text-align:center;
     position:relative;
-    top:80px;
+    top:60px;
+}
+
+.skill-list {
+    margin:0;
+    padding:0;
+    list-style-type: none;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 80px;
+}
+.skill{
+    text-decoration: none;
+    font-family: 'spline sans mono', Verdana;
+    padding:0 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.skill:nth-child(1){
+    border-right: 1px solid white;
+}
+.skill:nth-child(2){
+    border-right: 1px solid white;
 }
 
 /* Checkbox */
@@ -154,7 +180,7 @@ h6 {
     text-decoration:none;
     text-transform:uppercase;
     letter-spacing: 3px;
-    font-size: 40px;
+    font-size: 50px;
 }
 
 /* Animação do menu */
@@ -236,7 +262,7 @@ h6 {
     font-family:sans-serif;
     letter-spacing: 1px;
     color: rgb(109,109,109);
-
+    font-size: 20px;
 }
 
 .card-wrapper{
@@ -259,7 +285,7 @@ h6 {
     transition: 0.3s;
 }
 .card-wrapper h3{
-    font-size: 40px;
+    font-size: 44px;
     text-transform: uppercase;
     letter-spacing: 3px;
     margin: 0;
@@ -285,7 +311,7 @@ h6 {
 }
 
 .card:hover > .card-wrapper p{
-    font-size:14px;
+    font-size:17px;
     opacity:1;
     visibility: visible;
 }
