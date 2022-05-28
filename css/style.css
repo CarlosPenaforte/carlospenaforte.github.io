@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@500&display=swap');
+body {
+    background-color: lightgray;
+    font-family: "spline sans mono",Sans-Serif,Verdana;
+    width: 97vw;
+    margin: auto;
+    padding: 10px;
+}
 #topper {
     background: linear-gradient(-45deg, rgb(0,100,100),rgb(0, 150, 150),rgb(0, 200, 175),rgb(0,255,150));
-    padding: 45px 10px;
-    height: 90vh;
+    height: 80vh;
     background-size: 400% 400%;
     display: flex;
     flex-direction: column;
@@ -10,30 +16,7 @@
     align-items: center;
     animation: backgroundTransition 8s ease-in-out infinite ;
     border-radius:5px;
-}
-body {
-    background-color: lightgray;
-    font-family: "spline sans mono",Sans-Serif,Verdana;
-    max-width: 70vw;
-    margin: auto;
-    padding: 10px;
-}
 
-#topper aside{
-    float: left;
-    margin: 0;
-    padding: 0;
-    position:fixed;
-    left: 0;
-    top:0;
-}
-#topper figure img{
-    border: 3px solid white;
-    display: flex;
-    border-radius: 50%;
-    margin:0;
-    padding: 0;
-    width: 70%;
 }
 h1 {
     display: flex;
@@ -51,6 +34,24 @@ h1 {
     text-transform: uppercase;
     position:absolute;
 }
+.profile{
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    display:flex;
+    position:relative;
+    top:-15vh;
+    left: 0;
+}
+#topper img{
+    border: 3px solid white;
+    border-radius: 50%;
+    margin:0;
+    padding: 0;
+    width: 80%;
+}
+
 h6 {
     display: flex;
     font-size: 12px;
@@ -62,7 +63,7 @@ h6 {
     text-align:center;
     text-transform: uppercase;
     position:relative;
-    top:50px;
+    top:10vh;
 }
 
 /* Checkbox */
@@ -295,10 +296,8 @@ h6 {
     border-radius:5px;
     margin-top:0;
     margin-bottom: 15px;
-    width: 70vw;
 }
 #about_me{
-    width: 70vw;
     margin-bottom: 15px;
 }
 
@@ -310,7 +309,7 @@ h6 {
     align-items: center;
 }
 .wrapper {
-    height: 90vh;
+    height: 80vh;
     background: linear-gradient(-45deg, rgb(0,100,100),rgb(0, 150, 150),rgb(0, 200, 175),rgb(0,255,200));
     background-size: 400% 400%;
     display: flex;
