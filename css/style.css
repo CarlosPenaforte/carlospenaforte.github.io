@@ -8,7 +8,7 @@ body {
 }
 #topper {
     background: linear-gradient(-45deg, rgb(0,100,100),rgb(0, 150, 150),rgb(0, 200, 175),rgb(0,255,150));
-    height: 80vh;
+    height: 70vh;
     background-size: 400% 400%;
     display: flex;
     flex-direction: column;
@@ -279,8 +279,8 @@ h6 {
 }
 
 .card:hover > .card-wrapper:before {
-    height: 250px;
-    width: 350px;
+    height: 240px;
+    width: 320px;
     border-radius: 5px;
     opacity: 1;
 }
@@ -309,7 +309,7 @@ h6 {
     align-items: center;
 }
 .wrapper {
-    height: 80vh;
+    height: 25vh;
     background: linear-gradient(-45deg, rgb(0,100,100),rgb(0, 150, 150),rgb(0, 200, 175),rgb(0,255,200));
     background-size: 400% 400%;
     display: flex;
