@@ -262,7 +262,7 @@ h6 {
     font-family:sans-serif;
     letter-spacing: 1px;
     color: rgb(109,109,109);
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .card-wrapper{
@@ -334,7 +334,8 @@ h6 {
     align-items: center;
 }
 .wrapper {
-    height: 25vh;
+    height: auto;
+    padding: 15px 0;
     background: linear-gradient(-45deg, rgb(0,100,100),rgb(0, 150, 150),rgb(0, 200, 175),rgb(0,255,200));
     background-size: 400% 400%;
     display: flex;
@@ -348,6 +349,7 @@ h4 {
     text-transform: uppercase;
     letter-spacing: 4px;
     color: white;
+    font-size: 30px;
 }
 .social-media{
     margin-top: 1rem;
@@ -358,7 +360,7 @@ h4 {
     color: white;
     margin-left:1px;
     margin-right:1px;
-    font-size: 14px;
+    font-size: 17px;
     padding: 1rem 4rem;
     border: 1px solid white;
     border-radius: 5px;
@@ -404,18 +406,19 @@ a:hover {
     }
 
     .card{
-        height:250px;
-        width:250px;
+        height:30vh;
+        width:70vw;
     }
 
     .card-text{
         width: 90%;
         margin-top:2rem;
         text-align: center;
+        font-size:26px;
     }
 
     .card:hover > .card-wrapper:before{
-        height: 190px;
-        width:190px;
+        height: 25vh;
+        width:55vw;
     }
 }
