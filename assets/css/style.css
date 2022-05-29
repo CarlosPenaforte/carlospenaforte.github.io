@@ -24,7 +24,7 @@ h1 {
     color: white;
     border: 1px solid white;
     margin:auto;
-    width:850px;
+    width:70vw;
     padding:3px;
     border-radius: 5px;
     letter-spacing: 3px;
@@ -262,7 +262,7 @@ h6 {
     font-family:sans-serif;
     letter-spacing: 1px;
     color: rgb(109,109,109);
-    font-size: 22px;
+    font-size: 25px;
 }
 
 .card-wrapper{
@@ -335,7 +335,7 @@ h6 {
 }
 .wrapper {
     height: auto;
-    padding: 15px 0;
+    padding-bottom: 30px;
     background: linear-gradient(-45deg, rgb(0,100,100),rgb(0, 150, 150),rgb(0, 200, 175),rgb(0,255,200));
     background-size: 400% 400%;
     display: flex;
@@ -360,7 +360,7 @@ h4 {
     color: white;
     margin-left:1px;
     margin-right:1px;
-    font-size: 17px;
+    font-size: 18px;
     padding: 1rem 4rem;
     border: 1px solid white;
     border-radius: 5px;
@@ -388,9 +388,24 @@ a:hover {
 
 /*responsible*/
 @media (max-width:800px) {
+    #topper h1{
+        font-size:30px;
+    }
+    #topper h6{
+        font-size:20px;
+    }
+
+    .skill{
+        font-size:14px;
+    }
+
     .social-media{
         display:flex;
         flex-direction:column;
+    }
+
+    .social-media a{
+        font-size:14px;
     }
 
     .container{
@@ -414,11 +429,18 @@ a:hover {
         width: 90%;
         margin-top:2rem;
         text-align: center;
-        font-size:26px;
+        font-size:20px;
     }
 
     .card:hover > .card-wrapper:before{
         height: 25vh;
         width:55vw;
+    }
+
+    .card-wrapper h3{
+        font-size:26px;
+    }
+    .card-wrapper p{
+        font-size:16px;
     }
 }
