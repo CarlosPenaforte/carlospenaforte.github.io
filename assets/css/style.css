@@ -92,6 +92,9 @@ h6 {
 .skill:nth-child(2){
     border-right: 1px solid white;
 }
+.skill:nth-child(3){
+    border-right: 1px solid white;
+}
 
 /* Checkbox */
 
